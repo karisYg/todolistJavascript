@@ -1,4 +1,24 @@
+body{
+	background-image: url('../img/bg3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: inherit;
+	    background-blend-mode: unset;
+	    height: 400px;
+
+}
 nav{
 	font-family: 'Kaushan Script', cursive;
 	font-size: 25px;
+}
+div#home{
+	font-family: 'Kaushan Script', cursive;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+button#answer:hover{
+	    background-color: #bf4d29;
+}
+p{
+	font-size: 30px;
 }

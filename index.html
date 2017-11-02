@@ -14,6 +14,8 @@
     <!-- Bootstrap core CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Shadows+Into+Light+Two" 
+rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   </head>
@@ -44,12 +46,23 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="home">
 
-      <div class="starter-template">
-        <h3 id="name">Bootstrap starter template</h3>
-          
+      <div class="row" id="welcomeheader">
+        <p class="col-md-6" style="line-height: 1;">Welcome Human, Kindly Add a name 
         </p>
+        <div class="col-md-4 pull-left">
+          <input id="userinput" type="text" class="form-control" placeholder="Answer">
+        </div>
+        <div class="col-md-2">
+          <button id="answer" type="text" class="btn btn-default"><img src="img/thumb_up.svg" alt="">
+          </button>
+        </div>
+        <p id="warning" style="float: right; color:#c34f2b; margin-right: 210px;"> </p>
+          
+      </div>
+      <div class="row" id="afteranswer">
+        <p class="text-info text-center">Welcome , username...</p>
       </div>
 
 
