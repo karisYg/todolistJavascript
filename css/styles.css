@@ -22,3 +22,6 @@ button#answer:hover{
 p{
 	font-size: 30px;
 }
+div#afteranswer{
+	display: none;
+}

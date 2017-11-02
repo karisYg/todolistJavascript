@@ -13,9 +13,11 @@
 
 $(document).ready(function(){
 	var btnclick = $("#answer");
-	var username = $("#userinput").val();
+	//var userinput = $("input#userinput").val();
+	var userinput = document.getElementById("userinput").value;
 	var pwarning = $("#warning");
-	$("#userinput").click(function(event) {
+	var welcomeheader =$("#welcomeheader");
+	$("#userinput").click(function() {
 		pwarning.text("");
 		$(this).css({
 			borderColor : '#000',
@@ -23,16 +25,19 @@ $(document).ready(function(){
 		});
 
 	});
-	btnclick.click(function(event) {
-		if (username!="") {
+	btnclick.click(function() {
+		console.log(userinput);
+		// if (userinput) {
+		// 	// welcomeheader.css('display', 'none');
+		// 	alert("message?: DOMString");
 
-		}else{
-			$("#userinput").css({
-				borderColor: ' #ea4d4d',
-				color: 'red'
-			});
-			pwarning.text("Hey, mehn ! add your Username! Here");
-		}
+		// }else{
+		// 	$("#userinput").css({
+		// 		borderColor: ' #ea4d4d',
+		// 		color: 'red'
+		// 	});
+		// 	pwarning.text("Hey, mehn ! add your Username! Here");
+		// }
 	});
 
 });
