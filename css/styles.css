@@ -36,3 +36,23 @@ p#todowarning{
     text-align: center;
     left: 20%;
 }
+span#delete{
+    background-color: black;
+    border-radius: 0px;
+    padding-left: 9px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    color: white;
+}
+span#delete:hover{
+	background-color:  #b70d0d;
+}
+
+ul#listtodos>li{
+	padding: 15px;
+	    color: #150101;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
