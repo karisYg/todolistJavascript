@@ -14,6 +14,8 @@ $(document).ready(function(){
 		
 	});
 
+	var username =localStorage.getItem("username");
+
 
 	//using local Storage
 	// var  username = "omondi";
@@ -24,19 +26,20 @@ $(document).ready(function(){
 
 	//setting Local storage
 
-	//localStorage.removeItem("username");
+	// localStorage.removeItem("username");
 
 
 
-		if (localStorage.getItem("username")!=null) {
-			username =localStorage.getItem("username");
+		if (username!=null) {
+			
 			$("div#afteranswer").fadeIn("slow", function() {
 				welcomeuser.html(username);
 				});
 
 
 		}else{
-			$("div#welcomeheader").fadeIn('slow');
+			$("div#welcomeheader").removeClass('hidden');
+			// $("div#welcomeheader").fadeIn('slow');
 
 			btnalert.click(function() {
 				var username = inputusername.val();
