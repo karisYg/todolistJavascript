@@ -28,7 +28,17 @@ $(document).ready(function(){
 
 	//setting Local storage
 
-	// localStorage.removeItem("username");
+	//resetting the localstorage
+
+	$("a#reset").click(function(event) {
+		/* Act on the event */
+
+		localStorage.removeItem("username");
+		location.reload();
+		event.preventDefault();
+	});
+
+	
 
 
 
@@ -37,7 +47,7 @@ $(document).ready(function(){
 			$("div#afteranswer").fadeIn("slow", function() {
 				welcomeuser.html(username);
 				});
-
+			$("a#reset").text("Reset");
 
 		}else{
 			$("div#welcomeheader").removeClass('hidden');
@@ -47,7 +57,9 @@ $(document).ready(function(){
 				var username = inputusername.val();
 				if (username!="") {
 					localStorage.setItem("username", username);
+					
 					location.reload();
+
 				}
 				
 			});
