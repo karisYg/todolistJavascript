@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 	var btnalert = $("button#btnalert");
 
+	var welcomeuser =$("#welcomeuser");
+
 	inputusername.click(function() {
 		warning.fadeOut('fast');
 		$(this).val("");
@@ -14,7 +16,12 @@ $(document).ready(function(){
 	btnalert.click(function() {
 		var username =inputusername.val();
 		if (username!="") {
-			alert(username);
+			$("div#afteranswer").show("fast", function() {
+				$("div#welcomeheader").hide();
+				welcomeuser.html("Welcome , <b>"+username+"</b>");
+			});
+			
+			
 
 		}else{
 			warning.fadeIn('fast', function() {
