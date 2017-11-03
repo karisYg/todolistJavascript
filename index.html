@@ -49,16 +49,17 @@ rel="stylesheet">
     <div class="container" id="home">
 
       <div class="row hidden" id="welcomeheader">
-        <p class="col-md-6" style="line-height: 1;">Welcome Human, Kindly Add a name 
-        </p>
-        <div class="col-md-4 pull-left">
-          <input type="text" id="inputusername" class="form-control"  style="text-indent: 10px;"  placeholder="Answer here" />
-        </div>
-        <div class="col-md-2">
-          <button id="btnalert" type="text" class="btn btn-default"><img src="img/thumb_up.svg" alt="">
-          </button>
-        </div>
-        <p id="warning" style="float: right; color:#c34f2b; margin-right: 210px;"> </p>
+          <p class="col-md-6" style="line-height: 1;">Welcome Human, Kindly Add a name 
+          </p>
+          <div class="col-md-4 pull-left">
+            <input type="text" id="inputusername" class="form-control"  style="text-indent: 10px;"  placeholder="Answer here" />
+          </div>
+          <div class="col-md-2">
+            <button id="btnalert" type="text" class="btn btn-default"><img src="img/thumb_up.svg" alt="">
+            </button>
+          </div>
+          <p id="warning" style="float: right; color:#c34f2b; margin-right: 210px;">
+          </p>
           
       </div>
       <div class="row" id="afteranswer">
@@ -68,12 +69,14 @@ rel="stylesheet">
 
         <div class="row text-center">
           <div class="col-md-8">
-            <input type="text" class="form-control pull-right" placeholder="Add new Todo ">
+            <input id="newtodo" type="text" class="form-control pull-right"
+            style="font-weight: bold;letter-spacing: 2.5px; text-indent: 10px; border-color: #8a8282;" 
+            placeholder="Add new Todo ">
           </div>
           <div class="col-md-4">
-            <button class="btn btn-info" style="width: 100%;">Add Todo</button>
+            <button id="addtodobtn" class="btn btn-info" style="width: 100%;">Add Todo</button>
           </div>
-          
+          <p id="todowarning"></p>
         </div><br>
         <div class="row" style="padding-right: 15px; padding-left: 15px;">
           <ul class="list-group col-md-8 pull-left ">

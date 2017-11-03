@@ -8,6 +8,8 @@ $(document).ready(function(){
 
 	var welcomeuser =$("#welcomeuser");
 
+
+
 	inputusername.click(function() {
 		warning.fadeOut('fast');
 		$(this).val("");
@@ -49,30 +51,25 @@ $(document).ready(function(){
 				}
 				
 			});
-			// 	btnalert.click(function() {
-			// 	var username =inputusername.val();
-			// 	if (username!="") {
-			// 		localStorage.setItem("username", username);
-
-			// 		$("div#afteranswer").show("fast", function() {
-			// 			$("div#welcomeheader").hide();
-			// 			welcomeuser.html("Welcome , <b>"+localStorage.getItem("username")+"</b>");
-			// 		});
-					
-					
-
-			// 	}else{
-			// 		warning.fadeIn('fast', function() {
-			// 			$(this).text("Buddy, add your username!");
-			// 			inputusername.css('borderColor', '#18bc9c');
-						
-			// 		});
-
-			// 	}
-
-				
-			// });
 		}
+
+	var addtodobtn =$("#addtodobtn");
+	var newtodoinput =$("input#newtodo");
+	
+
+	newtodoinput.click(function() {
+		$(this).val("");
+		$("#todowarning").text("");
+	});
+
+	addtodobtn.click(function() {
+		var todo=newtodoinput.val();
+		if (todo!="") {
+			alert(todo);
+		}else{
+			$("#todowarning").text(" Required Here!");
+		}
+	});
 
 
 
