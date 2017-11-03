@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
 	var inputusername = $("input#inputusername");
 	var warning = $("p#warning");
 
@@ -13,27 +15,63 @@ $(document).ready(function(){
 	});
 
 
-	btnalert.click(function() {
-		var username =inputusername.val();
-		if (username!="") {
-			$("div#afteranswer").show("fast", function() {
-				$("div#welcomeheader").hide();
-				welcomeuser.html("Welcome , <b>"+username+"</b>");
-			});
-			
-			
+	//using local Storage
+	// var  username = "omondi";
+	// localStorage.setItem("username", username);
+
+	//getting localStorage item
+	//var cat = localStorage.getItem("myCat");
+
+	//setting Local storage
+
+	//localStorage.removeItem("username");
+
+
+
+		if (localStorage.getItem("username")!=null) {
+			username =localStorage.getItem("username");
+			$("div#afteranswer").fadeIn("slow", function() {
+				welcomeuser.html(username);
+				});
+
 
 		}else{
-			warning.fadeIn('fast', function() {
-				$(this).text("Buddy, add your username!");
-				inputusername.css('borderColor', '#18bc9c');
+			$("div#welcomeheader").fadeIn('slow');
+
+			btnalert.click(function() {
+				var username = inputusername.val();
+				if (username!="") {
+					localStorage.setItem("username", username);
+					location.reload();
+				}
 				
 			});
+			// 	btnalert.click(function() {
+			// 	var username =inputusername.val();
+			// 	if (username!="") {
+			// 		localStorage.setItem("username", username);
 
+			// 		$("div#afteranswer").show("fast", function() {
+			// 			$("div#welcomeheader").hide();
+			// 			welcomeuser.html("Welcome , <b>"+localStorage.getItem("username")+"</b>");
+			// 		});
+					
+					
+
+			// 	}else{
+			// 		warning.fadeIn('fast', function() {
+			// 			$(this).text("Buddy, add your username!");
+			// 			inputusername.css('borderColor', '#18bc9c');
+						
+			// 		});
+
+			// 	}
+
+				
+			// });
 		}
 
-		
-	});
+
 
 
 

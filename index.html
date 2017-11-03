@@ -48,7 +48,7 @@ rel="stylesheet">
 
     <div class="container" id="home">
 
-      <div class="row" id="welcomeheader">
+      <div class="row hidden" id="welcomeheader">
         <p class="col-md-6" style="line-height: 1;">Welcome Human, Kindly Add a name 
         </p>
         <div class="col-md-4 pull-left">
@@ -62,7 +62,28 @@ rel="stylesheet">
           
       </div>
       <div class="row" id="afteranswer">
-        <p class="text-info text-center" id="welcomeuser"></p>
+         <p class="text-info text-center"> Welcome ,  
+          <strong id="welcomeuser">
+         </strong></p>
+
+        <div class="row text-center">
+          <div class="col-md-8">
+            <input type="text" class="form-control pull-right" placeholder="Add new Todo ">
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-info" style="width: 100%;">Add Todo</button>
+          </div>
+          
+        </div><br>
+        <div class="row" style="padding-right: 15px; padding-left: 15px;">
+          <ul class="list-group col-md-8 pull-left ">
+              <li class="list-group-item list-group-item-success">one <span>Delete</span> </li>
+              <li class="list-group-item list-group-item-info">two</li>
+              <li class="list-group-item list-group-item-warning">three</li>
+              <li class="list-group-item list-group-item-success">four</li>
+          </ul>
+        </div>
+
       </div>
 
 
