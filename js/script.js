@@ -84,8 +84,8 @@ $(document).ready(function(){
 	document.onkeypress=function(e){
 		e=e||window.event;
 
-		var charCode =(typeof e.which ==13)?e.which:e.keyCode;
-		if (charCode) {
+		//var charCode =(typeof e.which ==13)?e.which:e.keyCode;
+		if (13 == e.keyCode) {
 			brains();
 		}
 	}
@@ -93,17 +93,40 @@ $(document).ready(function(){
 
 
 	var todoArray =[];
+	var sideOne ="<li class='list-group-item list-group-item-success'><span style='color: #fff;'><strong>Author :  <i>Kamato</i></strong></span><p id='todotext'>";
+	var sideTwo="</p><p><span id='delete'><i class='fa fa-trash' aria-hidden='true'></i></span></p></li>";
+
 	function brains() {
 		var todo=newtodoinput.val();
+
+// 		var dateFormat = require('dateformat');
+// var date = new Date();
+// var now=  dateFormat(date, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+		var today = new Date();
+		var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		var dateTime = date+' '+time;
+
+
 		if (todo!="") {
 			todoArray.push(todo);
-			alert(todoArray);
+			// alert(todoArray);
+			alert(now);
+			$("ul#listtodos").append(sideOne+todo+sideTwo);
 			
 		}else{
 			$("#todowarning").text(" Required Here!");
 			$("input#newtodo").css('borderColor', '#d00e0e');
 		}
 	}
+
+
+	// setTimeout(shish,"2000");
+
+	// function shish() {
+	// 	/* body... */
+	// 	console.log("shish is tall");
+	// }
 
 
 
