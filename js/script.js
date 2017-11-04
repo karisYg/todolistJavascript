@@ -74,14 +74,36 @@ $(document).ready(function(){
 		$("#todowarning").text("");
 	});
 
+	
 	addtodobtn.click(function() {
+		brains();
+	});
+
+	// listening for keypress event...the enter key
+
+	document.onkeypress=function(e){
+		e=e||window.event;
+
+		var charCode =(typeof e.which ==13)?e.which:e.keyCode;
+		if (charCode) {
+			brains();
+		}
+	}
+
+
+
+	var todoArray =[];
+	function brains() {
 		var todo=newtodoinput.val();
 		if (todo!="") {
-			alert(todo);
+			todoArray.push(todo);
+			alert(todoArray);
+			
 		}else{
 			$("#todowarning").text(" Required Here!");
+			$("input#newtodo").css('borderColor', '#d00e0e');
 		}
-	});
+	}
 
 
 
